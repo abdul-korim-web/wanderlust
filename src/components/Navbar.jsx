@@ -15,7 +15,7 @@ const Navbar = () => {
     },
     {
       name: "Destinations",
-      path: "/",
+      path: "/destinations",
     },
     {
       name: "My Bookings",
@@ -100,4 +100,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;  

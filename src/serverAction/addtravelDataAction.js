@@ -6,7 +6,6 @@ export const addtravelDataAction = async (fromData) => {
   const data  = Object.fromEntries(fromData.entries())
   // console.log(`${process.env.SERVER_URL}/traveldata`);
   const res = await axios.post(`${process.env.SERVER_URL}/traveldata`,data)
-
    return {
       success: true,
       message: res?.data?.message,
