@@ -52,6 +52,7 @@ const AddTravel = () => {
               </Label>
 
               <Input
+              name="country"
                 placeholder="Bangladesh"
                 className="rounded-2xl h-14 border border-gray-200"
               />
