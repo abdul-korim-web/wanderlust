@@ -1,10 +1,12 @@
 import React from 'react';
 import { MapPin, Clock, Persons, ArrowRight } from "@gravity-ui/icons";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const DestinationsCard = ({destination}) => {
     return (
-         <div
+         <Link 
+         href={`destinations/${destination._id}`}
              
               className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
@@ -50,7 +52,7 @@ const DestinationsCard = ({destination}) => {
                   <ArrowRight width={18} height={18} />
                 </button>
               </div>
-            </div>
+            </Link>
     );
 }
 

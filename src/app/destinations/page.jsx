@@ -29,7 +29,8 @@ const DestinationsPage = async () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations?.length > 0 ? (
             destinations.map((destination) => (
-              <DestinationsCard
+              <DestinationsCard 
+              
                 key={destination._id}
                 destination={destination}
               />
