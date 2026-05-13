@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 const getTravelById = async (id) => {
   const res = await fetch(
     `${process.env.SERVER_URL}/traveldata/${id}`,
@@ -10,7 +11,7 @@ const getTravelById = async (id) => {
 };
 
 const DestinationDetailsPage = async ({ params }) => {
-  const { id } = await params;
+  const { id } =await params;
 
   const result = await getTravelById(id);
   const data = result?.data;
@@ -37,6 +38,7 @@ const DestinationDetailsPage = async ({ params }) => {
         </div>
 
         <div className="p-6 md:p-10 space-y-4">
+
           <h1 className="text-3xl md:text-4xl font-bold">
             {data.destinationName}
           </h1>
@@ -65,11 +67,17 @@ const DestinationDetailsPage = async ({ params }) => {
             Departure: {new Date(data.departureDate).toDateString()}
           </p>
 
-          <button className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-2xl font-semibold cursor-pointer">
-            Book Now
-          </button>
-        </div>
+          <div className="flex flex-col md:flex-row gap-4 pt-6">
 
+           
+           
+            <button className="w-full md:w-auto bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-2xl font-semibold">
+              Book Now
+            </button>
+
+          </div>
+
+        </div>
       </div>
     </div>
   );
